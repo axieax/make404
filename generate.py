@@ -10,12 +10,6 @@ OPERATIONS_PERM = tuple(itertools.product(OPERATIONS, repeat=CARRIAGE_DIGITS - 1
 
 
 def generate_equation(digits: list[str], operations: tuple[str, ...]) -> list[str]:
-    # equation = []
-    # for i in range(CARRIAGE_DIGITS - 1):
-    #     equation.append(digits[i])
-    #     equation.append(operations[i])
-    # equation.append(digits[-1])
-    # return equation
     equation = []
     for tup in zip(digits, operations):
         equation.extend(tup)
